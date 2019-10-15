@@ -11,10 +11,13 @@
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("/incidences");
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+
+Route::resource('incidences', 'IncidenceController');
